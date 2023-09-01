@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="half-life" # set by `omz`
+ZSH_THEME="cypher" # set by `omz`
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -83,3 +83,5 @@ alias Spotify="flatpak run com.spotify.Client"
 # Exports:
 export LD_LIBRARY_PATH="/usr/local/lib:/usr/local/lib64:$LD_LIBRARY_PATH"
 export EDITOR="vi"
+
+[ -f "/home/lumi/.ghcup/env" ] && source "/home/lumi/.ghcup/env" # ghcup-env

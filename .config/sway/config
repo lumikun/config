@@ -16,8 +16,8 @@ set $right l
 set $term kitty
 set $rofi_cmd rofi \
         -terminal '$term'
-set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
-
+# set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
+set $menu "rofi -combi-modi window,drun,ssh,run -show combi -show-icons"
 
 ### Output configuration
 
@@ -32,6 +32,10 @@ exec swayidle -w \
           timeout 3000 'swaylock -f -c 000000' \
           timeout 3600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
           before-sleep 'swaylock -f -c 000000'
+
+# Colors
+client.focused		#282a36 #50fa7b #000000 #50fa7b #bd93f9
+client.unfocused	#282a36 #50fa7b #000000 #50fa7b #44475a
 
 
 ### Key bindings
@@ -210,10 +214,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-default_border pixel 2
+default_border pixel 3
 
-gaps inner 2
-gaps outer 4
+gaps inner 3
+gaps outer 6
 
 bar {
     position top
